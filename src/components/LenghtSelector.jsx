@@ -31,7 +31,7 @@ const LenghtSelector = ({ getSelectValue }) => {
               getSelectValue(value);
               setValue("");
             }}
-            className="btn btn-primary fw-bold mt-2"
+            className="btn btn-primary fw-bold mt-2 w-100"
           >
             Create Password
           </button>
