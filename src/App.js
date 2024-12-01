@@ -29,16 +29,26 @@ function App() {
     setPasskey([password]);
   }
   return (
-    <div className="container-fluid">
+    <div className="container-fluid d-flex flex-column  gap-3 h-100">
       <div className="row">
-        <div className="col-12 col-md-8 col-lg-6 mx-auto mt-5">
+        <div className="col-12 col-md-8 col-lg-6 mx-auto ">
           {/* Bu alan içerik için ayrıldı */}
-          <div className="card rounded p-5 bg-success">
+          <div className="card rounded p-3 bg-success">
             <div className="card-body rounded bg-secondary d-flex flex-column justify-content-center align-items-center">
               <h2 className="badge-lg bg-primary text-white mb-3">
                 Password Create App
               </h2>
               <LenghtSelector getSelectValue={getSelectValue} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="row">
+        <div className="col-12 col-md-8 col-lg-6 mx-auto ">
+          {/* Bu alan içerik için ayrıldı */}
+          <div className="card rounded p-3 bg-success">
+            <div className="card-body rounded bg-secondary d-flex flex-column justify-content-center align-items-center">
               <ShowPassword passKeys={passkeys} />
             </div>
           </div>

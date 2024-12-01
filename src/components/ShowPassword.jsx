@@ -13,7 +13,7 @@ const ShowPassword = ({ passKeys }) => {
       .catch(() => setCopySuccess("Kopyalama başarısız."));
   };
   return (
-    <div className="container">
+    <div className="container bg-secondary rounded p-3">
       <div className="card mt-2 p-2 border-primary d-flex">
         <div className="card-body d-flex justify-content-center align-items-center ">
           <h2 className="badge bg-primary m-1 p-2">Yeni Şifreniz Hazır</h2>
