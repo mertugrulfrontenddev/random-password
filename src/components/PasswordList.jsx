@@ -12,16 +12,18 @@ const PasswordList = ({ allPasswords }) => {
                 <div className="card ">
                   <div className="card-body d-flex flex-column p-5">
                     <p>
-                      Henüz bir şifre eklemediniz lütfen şifre sayfasına dönünüz
+                      You haven't added any passwords yet. Please go back to the
+                      password page.
                     </p>
                     <span>
-                      Dönmek için lütfen
+                      Click
                       <Link
-                        className="link navbar-brand text-primary ms-2"
+                        className="link navbar-brand text-primary ms-1 me-1"
                         to="/"
                       >
-                        Tıklayınız...
+                        here
                       </Link>
+                      to go back...
                     </span>
                   </div>
                 </div>
