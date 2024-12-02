@@ -7,6 +7,7 @@ import ShowPassword from "./components/ShowPassword";
 import Navbar from "./components/Navbar";
 import PasswordAddButton from "./components/PasswordAddButton";
 import PasswordList from "./components/PasswordList";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function App() {
   let [passkeys, setPasskey] = useState([]);

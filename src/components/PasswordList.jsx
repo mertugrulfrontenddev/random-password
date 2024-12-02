@@ -10,7 +10,7 @@ const PasswordList = ({ allPasswords }) => {
             {allPasswords.length === 0 ? (
               <div className="container">
                 <div className="card ">
-                  <div className="card-body d-flex flex-column  align-items-center p-4">
+                  <div className="card-body d-flex flex-column p-5">
                     <p>
                       Henüz bir şifre eklemediniz lütfen şifre sayfasına dönünüz
                     </p>
