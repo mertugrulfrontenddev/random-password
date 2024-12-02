@@ -1,5 +1,5 @@
 import { useState } from "react";
-const ShowPassword = ({ passKeys }) => {
+const ShowPassword = ({ passKeys, visLabel }) => {
   const [copySuccess, setCopySuccess] = useState(""); // Kopyalama durumu
 
   // Kopyalama işlevi
@@ -16,7 +16,12 @@ const ShowPassword = ({ passKeys }) => {
     <div className="container bg-secondary rounded p-3">
       <div className="card mt-2 p-2 border-primary d-flex">
         <div className="card-body d-flex justify-content-center align-items-center ">
-          <h2 className="badge bg-primary m-1 p-2">Yeni Şifreniz Hazır</h2>
+          {visLabel && (
+            <h2 className="badge bg-primary m-1 p-2">
+              Your New Password is Ready!
+            </h2>
+          )}
+
           <p className="badge bg-secondary m-1 p-2">{passKeys.join("-")}</p>
         </div>
         <button

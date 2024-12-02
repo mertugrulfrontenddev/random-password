@@ -6,7 +6,7 @@ import ShowPassword from "./components/ShowPassword";
 
 function App() {
   let [passkeys, setPasskey] = useState([]);
-
+  let [visLabel, setVisLabel] = useState(false);
   function getRandomChar(length) {
     const characters =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*_+";
@@ -23,7 +23,7 @@ function App() {
 
   function getSelectValue(selectValue) {
     let password = getRandomChar(selectValue);
-
+    setVisLabel(true);
     setPasskey([password]);
   }
   return (
@@ -47,7 +47,7 @@ function App() {
           {/* Bu alan içerik için ayrıldı */}
           <div className="card rounded p-2 bg-white">
             <div className="card-body rounded bg-secondary d-flex flex-column justify-content-center align-items-center">
-              <ShowPassword passKeys={passkeys} />
+              <ShowPassword passKeys={passkeys} visLabel={visLabel} />
             </div>
           </div>
         </div>
