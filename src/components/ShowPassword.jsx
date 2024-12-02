@@ -25,7 +25,7 @@ const ShowPassword = ({ passKeys, visLabel }) => {
           <p className="badge bg-secondary m-1 p-2">{passKeys.join("-")}</p>
         </div>
         <button
-          className="btn btn-success w-50 mx-auto"
+          className="btn btn-outline-primary w-50 mx-auto fw-bold"
           onClick={handleCopy} // Butona tıklanınca handleCopy çalışacak
         >
           Copy

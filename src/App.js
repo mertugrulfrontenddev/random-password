@@ -1,12 +1,18 @@
 import logo from "./logo.svg";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import LenghtSelector from "./components/LenghtSelector";
 import { useState } from "react";
 import ShowPassword from "./components/ShowPassword";
+import Navbar from "./components/Navbar";
+import PasswordAddButton from "./components/PasswordAddButton";
+import PasswordList from "./components/PasswordList";
 
 function App() {
   let [passkeys, setPasskey] = useState([]);
   let [visLabel, setVisLabel] = useState(false);
+
+  let [allPasswords, setAllPasswords] = useState([]);
   function getRandomChar(length) {
     const characters =
       "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*_+";
@@ -26,33 +32,68 @@ function App() {
     setVisLabel(true);
     setPasskey([password]);
   }
+
+  const addPasswords = (value) => {
+    setAllPasswords((prevPasswords) => [...prevPasswords, value]);
+  };
   return (
-    <div className="container-fluid d-flex flex-column  gap-1 ">
+    <Router>
       <div className="row">
-        <div className="col-12 col-md-8 col-lg-6 mx-auto ">
-          {/* Bu alan içerik için ayrıldı */}
-          <div className="card rounded p-2 bg-white ">
-            <div className="card-body rounded bg-secondary d-flex flex-column justify-content-center align-items-center">
-              <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold">
-                Password Create App
-              </h2>
-              <LenghtSelector getSelectValue={getSelectValue} />
-            </div>
+        <div className="col-12 col-md-8 col-lg-9 mx-auto  mb-2 ">
+          <div className="card rounded">
+            <Navbar />
           </div>
         </div>
       </div>
 
-      <div className="row">
-        <div className="col-12 col-md-8 col-lg-6 mx-auto ">
-          {/* Bu alan içerik için ayrıldı */}
-          <div className="card rounded p-2 bg-white">
-            <div className="card-body rounded bg-secondary d-flex flex-column justify-content-center align-items-center">
-              <ShowPassword passKeys={passkeys} visLabel={visLabel} />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div className="container-fluid   gap-1">
+              <div className="row">
+                <div className=" col-12 col-md-8 col-lg-9 mx-auto">
+                  <div className="card rounded p-2 bg-white ">
+                    <div className="card-body rounded bg-secondary d-flex flex-column   min-height">
+                      <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold text-center">
+                        Password Create App
+                      </h2>
+                      <LenghtSelector getSelectValue={getSelectValue} />
+                      {visLabel && (
+                        <p>
+                          <ShowPassword
+                            passKeys={passkeys}
+                            visLabel={visLabel}
+                          />
+                          <PasswordAddButton
+                            addPasswords={addPasswords}
+                            generatedPassword={passkeys[0]}
+                          />
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          }
+        ></Route>
+        <Route
+          path="/my-all-passwords"
+          element={
+            <div className="row">
+              <div className=" col-12 col-md-8 col-lg-9 mx-auto">
+                <div className="card rounded p-2 bg-white ">
+                  <div className="card-body rounded bg-secondary d-flex flex-column justify-content-center align-items-center min-height">
+                    <PasswordList allPasswords={allPasswords} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          }
+        />
+      </Routes>
+    </Router>
   );
 }
 export default App;
