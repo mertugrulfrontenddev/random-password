@@ -34,8 +34,11 @@ function App() {
     setPasskey([password]);
   }
 
-  const addPasswords = (value) => {
-    setAllPasswords((prevPasswords) => [...prevPasswords, value]);
+  const addPasswords = (password, platform) => {
+    setAllPasswords((prevPasswords) => [
+      ...prevPasswords,
+      { id: Date.now(), platform, password },
+    ]);
   };
   return (
     <Router>
@@ -57,7 +60,7 @@ function App() {
                   <div className="card rounded p-2 bg-white ">
                     <div className="card-body rounded bg-secondary d-flex flex-column   min-height">
                       <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold text-center">
-                        Password Create App
+                        Password Create App {console.log(allPasswords)}
                       </h2>
                       <LenghtSelector getSelectValue={getSelectValue} />
                       {visLabel && (
