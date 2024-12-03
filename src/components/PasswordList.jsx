@@ -6,8 +6,8 @@ const PasswordList = ({ allPasswords }) => {
       <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold text-center">
         Your Password List
       </h2>
-      <div className="container rounded bg-white min-height">
-        <div className="card bg-primary w-auto mt-3">
+      <div className="container rounded  min-height">
+        <div className="card w-auto mt-1 min-height">
           <div className="card-body">
             <ul className="list-group ">
               {allPasswords.length === 0 ? (

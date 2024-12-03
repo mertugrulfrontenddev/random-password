@@ -13,9 +13,9 @@ const ShowPassword = ({ passKeys, visLabel }) => {
       .catch(() => setCopySuccess("Kopyalama başarısız."));
   };
   return (
-    <div className="container mt-2">
-      <div className="card p-4 mt-2 border-primary d-flex align-items-center">
-        <div className="card-body">
+    <div className="container bg-secondary rounded p-3">
+      <div className="card mt-2 p-2 border-primary d-flex">
+        <div className="card-body d-flex justify-content-center align-items-center ">
           {visLabel && (
             <h2 className="badge bg-primary m-1 p-2">
               Your New Password is Ready!
@@ -25,7 +25,7 @@ const ShowPassword = ({ passKeys, visLabel }) => {
           <p className="badge bg-secondary m-1 p-2">{passKeys.join("-")}</p>
         </div>
         <button
-          className="btn btn-outline-primary w-25 mx-auto fw-bold"
+          className="btn btn-outline-primary w-50 mx-auto fw-bold"
           onClick={handleCopy} // Butona tıklanınca handleCopy çalışacak
         >
           Copy

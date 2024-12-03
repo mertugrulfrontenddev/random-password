@@ -62,28 +62,23 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="container-fluid   gap-1">
-              <div className="row">
-                <div className=" col-12 col-md-8 col-lg-9 mx-auto">
-                  <div className="card rounded p-2 bg-white ">
-                    <div className="card-body rounded bg-primary ">
-                      <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold text-center">
-                        Password Create App {console.log(allPasswords)}
-                      </h2>
-                      <LenghtSelector getSelectValue={getSelectValue} />
-                      {visLabel && (
-                        <span>
-                          <ShowPassword
-                            passKeys={passkeys}
-                            visLabel={visLabel}
-                          />
-                          <PasswordAddButton
-                            addPasswords={addPasswords}
-                            generatedPassword={passkeys[0]}
-                          />
-                        </span>
-                      )}
-                    </div>
+            <div className="row">
+              <div className=" col-12 col-md-8 col-lg-9 mx-auto">
+                <div className="card rounded p-2 bg-white ">
+                  <div className="card-body rounded bg-secondary ">
+                    <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold text-center">
+                      Password Create App
+                    </h2>
+                    <LenghtSelector getSelectValue={getSelectValue} />
+                    {visLabel && (
+                      <span>
+                        <ShowPassword passKeys={passkeys} visLabel={visLabel} />
+                        <PasswordAddButton
+                          addPasswords={addPasswords}
+                          generatedPassword={passkeys[0]}
+                        />
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -96,7 +91,7 @@ function App() {
             <div className="row">
               <div className=" col-12 col-md-8 col-lg-9 mx-auto">
                 <div className="card rounded p-2 bg-white ">
-                  <div className="card-body rounded bg-primary d-flex flex-column align-items-center  min-height">
+                  <div className="card-body rounded bg-secondary d-flex flex-column align-items-center  ">
                     <PasswordList allPasswords={allPasswords} />
                   </div>
                 </div>
