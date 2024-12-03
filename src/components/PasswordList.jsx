@@ -7,7 +7,7 @@ const PasswordList = ({ allPasswords }) => {
         Your Password List
       </h2>
 
-      <div className="card w-75 mt-3">
+      <div className="card w-100 mt-3">
         <div className="card-body">
           <ul className="list-group ">
             {allPasswords.length === 0 ? (
@@ -42,7 +42,7 @@ const PasswordList = ({ allPasswords }) => {
                     <span className="text-danger">{password.platform}</span>{" "}
                     password is
                   </span>
-                  <span className="badge bg-primary fs-5 p-2 ms-3">
+                  <span className="badge bg-primary fs-5 p-2 ms-1">
                     {password.password}
                   </span>
                 </li>
