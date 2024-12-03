@@ -58,13 +58,13 @@ function App() {
               <div className="row">
                 <div className=" col-12 col-md-8 col-lg-9 mx-auto">
                   <div className="card rounded p-2 bg-white ">
-                    <div className="card-body rounded bg-secondary d-flex flex-column   min-height">
+                    <div className="card-body rounded bg-primary ">
                       <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold text-center">
                         Password Create App {console.log(allPasswords)}
                       </h2>
                       <LenghtSelector getSelectValue={getSelectValue} />
                       {visLabel && (
-                        <p>
+                        <span>
                           <ShowPassword
                             passKeys={passkeys}
                             visLabel={visLabel}
@@ -73,7 +73,7 @@ function App() {
                             addPasswords={addPasswords}
                             generatedPassword={passkeys[0]}
                           />
-                        </p>
+                        </span>
                       )}
                     </div>
                   </div>
@@ -88,7 +88,7 @@ function App() {
             <div className="row">
               <div className=" col-12 col-md-8 col-lg-9 mx-auto">
                 <div className="card rounded p-2 bg-white ">
-                  <div className="card-body rounded bg-secondary d-flex flex-column align-items-center  min-height">
+                  <div className="card-body rounded bg-primary d-flex flex-column align-items-center  min-height">
                     <PasswordList allPasswords={allPasswords} />
                   </div>
                 </div>

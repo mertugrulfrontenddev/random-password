@@ -7,7 +7,7 @@ const PasswordList = ({ allPasswords }) => {
         Your Password List
       </h2>
 
-      <div className="card w-100 mt-3">
+      <div className="card w-auto mt-3">
         <div className="card-body">
           <ul className="list-group ">
             {allPasswords.length === 0 ? (
@@ -34,17 +34,17 @@ const PasswordList = ({ allPasswords }) => {
             ) : (
               allPasswords.map((password, index) => (
                 <li
-                  className="list-group-item border-primary p-1"
+                  className="list-group-item border-primary fs-5 p-1"
                   key={password.id}
                 >
                   <span className="text-primary">
                     {index + 1 + ")"} Your{" "}
-                    <span className="badge bg-danger  p-2 ms-1">
+                    <span className="badge bg-danger fs-5  p-2 ms-1">
                       {password.platform}
                     </span>{" "}
                     password is
                   </span>
-                  <span className="badge bg-primary  p-2 ms-1">
+                  <span className="badge bg-primary  fs-5 p-2 ms-1">
                     {password.password}
                   </span>
                 </li>
