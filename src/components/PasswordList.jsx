@@ -34,12 +34,12 @@ const PasswordList = ({ allPasswords }) => {
               ) : (
                 allPasswords.map((password, index) => (
                   <li
-                    className="list-group-item border-primary  p-1"
+                    className="list-group-item border-primary  p-1 me-2"
                     key={password.id}
                   >
                     <span className="text-secondary">
                       {index + 1 + ")"} Your
-                      <span className="badge bg-danger   p-2 ms-2">
+                      <span className="badge bg-danger   p-1 ms-2 me-2">
                         {password.platform}
                       </span>
                       password is
