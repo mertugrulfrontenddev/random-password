@@ -26,7 +26,7 @@ const PasswordAddButton = ({ addPasswords, generatedPassword }) => {
             <option value="Binance"> Binance</option>
           </select>
           <button
-            className="btn btn-outline-primary  fw-bold"
+            className="btn btn-outline-primary  fw-bold mt-2"
             onClick={() => addPasswords(generatedPassword, platform)}
           >
             Save Password
