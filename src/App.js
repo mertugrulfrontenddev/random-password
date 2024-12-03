@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import PasswordAddButton from "./components/PasswordAddButton";
 import PasswordList from "./components/PasswordList";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import Banner from "./components/Banner";
 
 function App() {
   let [passkeys, setPasskey] = useState([]);
@@ -42,6 +43,13 @@ function App() {
   };
   return (
     <Router>
+      <div className="row">
+        <div className="col-12 col-md-8 col-lg-9 mx-auto  mb-2 ">
+          <div className="card rounded">
+            <Banner />
+          </div>
+        </div>
+      </div>
       <div className="row">
         <div className="col-12 col-md-8 col-lg-9 mx-auto  mb-2 ">
           <div className="card rounded">
