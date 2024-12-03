@@ -64,7 +64,7 @@ function App() {
           element={
             <div className="row">
               <div className=" col-12 col-md-8 col-lg-9 mx-auto">
-                <div className="card rounded p-2 bg-white ">
+                <div className="card rounded p-1 bg-white ">
                   <div className="card-body rounded bg-secondary ">
                     <h2 className="badge-lg  text-white mb-1 p-1 fs-2 fw-bold text-center">
                       Password Create App
@@ -90,7 +90,7 @@ function App() {
           element={
             <div className="row">
               <div className=" col-12 col-md-8 col-lg-9 mx-auto">
-                <div className="card rounded p-2 bg-white ">
+                <div className="card rounded p-1 bg-white ">
                   <div className="card-body rounded bg-secondary d-flex flex-column align-items-center  ">
                     <PasswordList allPasswords={allPasswords} />
                   </div>

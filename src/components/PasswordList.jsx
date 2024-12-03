@@ -21,7 +21,7 @@ const PasswordList = ({ allPasswords }) => {
                       <span className="text-secondary">
                         Click
                         <Link
-                          className="link navbar-brand text-primary ms-1 me-1"
+                          className="link navbar-brand text-primary ms-2 me-2"
                           to="/"
                         >
                           here
@@ -39,12 +39,12 @@ const PasswordList = ({ allPasswords }) => {
                   >
                     <span className="text-secondary">
                       {index + 1 + ")"} Your
-                      <span className="badge bg-danger   p-2 ms-1">
+                      <span className="badge bg-danger   p-2 ms-2">
                         {password.platform}
                       </span>
                       password is
                     </span>
-                    <span className="badge bg-primary   p-2 ms-1">
+                    <span className="badge bg-primary   p-2 ms-2">
                       {password.password}
                     </span>
                   </li>
