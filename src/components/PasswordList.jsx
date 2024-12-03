@@ -39,10 +39,12 @@ const PasswordList = ({ allPasswords }) => {
                 >
                   <span className="text-primary">
                     {index + 1 + ")"} Your{" "}
-                    <span className="text-danger">{password.platform}</span>{" "}
+                    <span className="badge bg-danger  p-2 ms-1">
+                      {password.platform}
+                    </span>{" "}
                     password is
                   </span>
-                  <span className="badge bg-primary fs-5 p-2 ms-1">
+                  <span className="badge bg-primary  p-2 ms-1">
                     {password.password}
                   </span>
                 </li>
