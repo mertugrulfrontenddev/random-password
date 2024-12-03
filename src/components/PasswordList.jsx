@@ -13,7 +13,7 @@ const PasswordList = ({ allPasswords }) => {
               {allPasswords.length === 0 ? (
                 <div className="container">
                   <div className="card ">
-                    <div className="card-body  p-3">
+                    <div className="card-body  p-1">
                       <p className="text-secondary">
                         You haven't added any passwords yet. Please go back to
                         the password page.
